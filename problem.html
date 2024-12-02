@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Problem</title>
+        <link rel="stylesheet" href="css/problem.css">
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    </head>
+
+    <header>
+        <div class="header">
+            <div class="navigation">
+                <ul>
+                    <li><img src="assets/logo.png" style="height: 100px; width: 100px; z-index: 10; margin-left: 190px; margin-top: 20px;"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="problem.html" style="text-decoration: underline;"><b>The Problem</b></a></li>
+                    <li><a href="progress.html">Progress Made</a></li>
+                    <li><a href="volunteer.html">Support/Donate</a></li>
+                    <li><a href="blog.html">Blog/Updates</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <button onclick="toggleSidebar()" class="toggle-side">></button>
+
+    
+    <div class="sidebar">
+        <h2>
+        <a href="#before">Before</a>
+        <a href="#after">After</a>
+        <a href="#parex">Parex Controversy</a>
+        <a href="#references">References</a>
+        </h2>
+    </div>
+
+    <body>
+        <script>
+            function toggleSidebar() {
+                const sidebar = document.querySelector('.sidebar');
+                const resizableElements = document.querySelectorAll('.resizable');
+                const toggleButton = document.querySelector('.toggle-side');
+            
+                if (sidebar.classList.contains('hidden')) {
+                    sidebar.classList.remove('hidden');
+                    resizableElements.forEach(element => {
+                        element.classList.remove('full-width');
+                        element.classList.add('reduced-width');
+                    });
+                    toggleButton.classList.remove('translated');
+                } else {
+                    sidebar.classList.add('hidden');
+                    resizableElements.forEach(element => {
+                        element.classList.remove('reduced-width');
+                        element.classList.add('full-width');
+                    });
+                    toggleButton.classList.add('translated');
+                }
+            }
+            </script>
+        <script>
+            let slideIndex = 1;
+            document.addEventListener("DOMContentLoaded", function() {
+                showSlides(slideIndex);
+            });
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+
+                // Toggle visibility of .fun element
+                let funFact = document.getElementById("funFact");
+                if (slideIndex === 1) {
+                    funFact.style.display = "block";
+                } else {
+                    funFact.style.display = "none";
+                }
+            }
+        </script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          var i;
+                          var slides = document.getElementsByClassName("mySlides2");
+                          var dots = document.getElementsByClassName("dot");
+                          if (n > slides.length) {slideIndex = 1}    
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none";  
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                              dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";  
+                          dots[slideIndex-1].className += " active";
+                        }
+        
+                        document.querySelector('.prev').addEventListener('click', function() {
+                            plusSlides(-1);
+                        });
+        
+                        document.querySelector('.next').addEventListener('click', function() {
+                            plusSlides(1);
+                        });
+        
+                        var dots = document.querySelectorAll('.dot');
+                        dots.forEach(function(dot, index) {
+                            dot.addEventListener('click', function() {
+                                currentSlide(index + 1);
+                            });
+                        });
+                    });
+                </script>
+<div class="resizable">
+        <div class="divider"></div>
+
+        <div class="title">
+            <h1>Before and After: The Condition of Pasig River</h1>
+        </div>
+
+        <div class="divider" id="before"></div>
+
+        <div class="before">
+            <h1> BEFORE</h1>
+        </div>
+        <div class="beforesegment">
+            <div class="beforeimage">
+                <figure>
+                    <img src="assets/before.jpg" class="before" alt="Before image of Pasig River">
+                    <figcaption>The Pasig River in the 1930s. / Photo by John Tewell</figcaption>
+                </figure>
+            </div>
+
+            <div class="beforeinfo">
+                <p>Historically, the Pasig River connected Manila Bay and Laguna de Bay, acting as a lifeline for the city. During the pre-colonial and Spanish colonial eras, it served as a center for trade and transportation. Due to the river's wealth, communities flourished along its banks. The river was rich in biodiversity, with fish and indigenous plants that provided for the livelihoods of the local populace. The river also had a cultural significance; it was frequently depicted as a symbol of life and connection in Filipino literature and history.</p>
+                <br>
+                <p>The Pasig River has historically played a crucial role in the lives of the residents along its banks. Here's how it has helped them over time:</p>
+            </div>
+        </div>
+
+            <div class="slideshow-container2">
+
+                <div class="mySlides2">
+                    <h1>Historical Role in Trade and Commerce</h1><br>
+                    <p class="author">- Served as a major transportation route during the Spanish colonial period and earlier.</p>
+                    <p class="author">- Connected Manila Bay and Laguna de Bay, facilitating trade and commerce.</p>
+                    <a href="https://mirror.pia.gov.ph/features/2023/07/31/pasig-river-a-historical-waterway-of-cultural-significance"><p>Source</p></a>
+
+                </div>
+                
+                <div class="mySlides2">
+                    <h1>Transportation and Mobility</h1><br>
+                    <p class="author">- Provided a mode of transport for goods and people across Metro Manila and surrounding areas.</p>
+                    <p class="author">- Supported livelihoods of riverside communities through fishing, farming, and trade.</p>
+                    <a href="https://mirror.pia.gov.ph/features/2023/07/31/pasig-river-a-historical-waterway-of-cultural-significance"><p>Source</p></a>
+
+                </div>
+                
+                <div class="mySlides2">
+                    <h1>Current Livelihood Opportunities</h1><br>
+                    <p class="author">- Despite decline in commercial importance, some communities still rely on the river for income.</p>
+                    <a href="https://mirror.pia.gov.ph/features/2023/07/31/pasig-river-a-historical-waterway-of-cultural-significance"><p>Source</p></a>
+
+                </div>
+                
+                <div class="mySlides2">
+                    <h1>Flood Management and Drainage</h1><br>
+                    <p class="author">- Acts as a natural waterway to channel rainwater and excess water during typhoons.</p>
+                    <p class="author">- Crucial for flood control in Metro Manila, protecting lives and properties.</p>
+                    <a href="https://mirror.pia.gov.ph/features/2023/07/31/pasig-river-a-historical-waterway-of-cultural-significance"><p>Source</p></a>
+
+                </div>
+                
+                <div class="mySlides2">
+                    <h1>Cultural and Historical Significance</h1><br>
+                    <p class="author">- Reflects the rich heritage of Metro Manila's waterways and community life along its banks.</p>
+                    <a href="https://mirror.pia.gov.ph/features/2023/07/31/pasig-river-a-historical-waterway-of-cultural-significance"><p>Source</p></a>
+
+                </div>
+                
+                <a class="prev">❮</a>
+                <a class="next">❯</a>
+                
+            </div>
+            </figcaption>
+                
+        <div class="divider"></div>
+
+        <div class="words">
+        <p>Before the Pasig River in Manila, Philippines was declared biologically dead in 
+        1990, it was home to many species of plants and animals, including:</p>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="assets/mangrove.jpg" style="width:100%">
+              <div class="text"><i><a href="https://esmart.nhrc.upd.edu.ph/?p=786#:~:text=The%20word%20“Manila”%20originated%20from,for%20some%20fish%20and%20crustaceans." style="color: inherit;">Scyphiphora hydrophylacea mangrove</a></i><br>
+                The <i>Scyphiphora hydrophylacea mangrove</i> species was 
+                once abundant along the river. Other mangrove species 
+                found in the area include the <i>Saging-Saging</i>, <i>Api-Api</i>, 
+                <i>Bungalon</i>, <i>Nipa Palm</i>, <i>Bakauan Babae</i>, and <i>Pagatpat</i>.</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="assets/rotifer.png" style="width:100%">
+              <div class="text"><a href="https://www.researchgate.net/publication/200600415_Composition_Abundance_and_Distribution_of_Rotifers_in_the_Pasig_River_Philippines" style="color: inherit;">Rotifer</a><br>
+                A 2009 study recorded the presence of many rotifer species in the river.</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="assets/copepod.png" style="width:100%">
+              <div class="text"><a href="https://asbp.org.ph/wp-content/uploads/2020/08/PJSB-IJD2-2020-008.pdf" style="color: inherit;">Copepod</a><br>
+                The ciliate <i>Vorticella</i> and the euglenoid Colacium were found on 
+                copepods in the river.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="assets/kanduli.png" style="width:100%">
+                <div class="text"><a href="https://animalia.bio/index.php/arius-manillensis" style="color: inherit;">Kanduli (Manila Sea Catfish)</a><br>
+                    The kanduli <i>(Arius manillensis)</i> is a native fish species 
+                    endemic to Luzon. It thrived in the freshwater and brackish habitats 
+                    of the Pasig River and Laguna de Bay. Kanduli played an essential 
+                    role in local fishing practices​. </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="assets/biya.jpg" style="width:100%">
+                <div class="text"><a href="https://storymaps.arcgis.com/stories/f0119df351f448a18922b4a51fdde539" style="color: inherit;">Biya (Goby)</a><br>
+                    Native goby species inhabited the Pasig River's clean waters, 
+                    providing a sustainable food source for communities along its 
+                    banks. These fish are now rare due to habitat degradation​. </div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        
+
+        <div class="fun" id="funFact">
+            Fun Fact: The name Manila is derived from the 
+            term "Maynila", which comes from the Tagalog words 
+            "may" (meaning "there is") and "nilad", which refers 
+            to a type of flowering mangrove plant (Scyphiphora 
+            hydrophyllacea) that once thrived along the shores 
+            of Manila Bay.
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="infos_before">
+            <h1>It is crucial to highlight the Pasig River's historical species for an array of reasons.</h1>
+            <div class="vertical"></div>
+            <ol>
+                <li><b>Recognizing Biodiversity Loss:</b> By analyzing their reduction, we can gain a better understanding of how pollution, industrialization, and urbanization affect regional biodiversity.</li>
+                <li><b>Cultural and Historical Significance:</b> Many of these species were important to the customs and means of subsistence of the riverbank people. Emphasizing them promotes cultural memory preservation and the importance of reestablishing a connection with Manila's natural heritage.</li>
+                <li><b>Policy and Development Implications:</b> Historical viewpoints offer a prism through which to evaluate ongoing and upcoming development initiatives, such as PAREX. They encourage people to consider how environmental preservation and urbanization may coexist.</li>
+                <li><b>Goals for Ecosystem Restoration:</b> Restoring species that were once abundant in the Pasig River can be used as a standard for effective restoration. By learning about the past abundance of species like kanduli, people can envision what a rehabilitated Pasig River might look like. Historical context gives clarity to what "restoration" truly means.</li>
+                <li><b>Education and Advocacy:</b> Public awareness and participation in environmental conservation can be stimulated by showcasing these species. It draws attention to what has been lost and explains why initiatives like the Pasig River Rehabilitation Commission (PRRC) are so important.</li>
+                <a href="https://www.flipscience.ph/features/whats-in-the-pasig-river/\"><b>Sources</b></a>
+            </ol>
+        </div>
+
+        <div class="divider" id="after"></div>
+
+        <div class="before">
+            <h1>AFTER</h1>
+        </div>
+        <div class="after_seg">
+            <div class="infos_after">
+                <p>The river was once a part of Manila's lively urban life, where people used it for 
+                    fishing and bathing in the early 1900s. However, as the city grew in population 
+                    and the river became used to the informal sector, there was a noticeable decline 
+                    in both commercial and personal activities in the river, which was equal to a 
+                    decline in fish migration and reproduction. <br><br>
+                The river's activities continued to deteriorate until 1970, at which point its water 
+                quality began to fall below the Class "C" level, meaning that it was unsuitable for 
+                any river activities, could no longer sustain aquatic life other than janitor fish
+                and water lilies, and was only suited for irrigation.</p>
+            </div>
+
+            <div class="after_image">
+                <img src="assets/pic2.jpg" class="after" alt="After image of Pasig River">
+                <figcaption><a href="https://www.ecohubmap.com/hot-spot/water-pollution-pasig-river-in-the-philippines/11yxis0ml7ughfxb">Water pollution Pasig River in the Philippines</a></figcaption>
+            </div>
+        </div>
+    <div class="title2">
+        <h1>After years of rehabilitation: Freshwater Tilapia caught on Pasig River</h1>
+    </div>
+    <div class="flex">
+        <div class="after_image">
+            <img src="assets/pic3.jpg" class="after" alt="After image of Pasig River">
+            <figcaption><a href="https://www.facebook.com/share/15QqRnzEYi/">Posted by Pasig River Coordinating and Management Office.</a></figcaption>
+        </div>
+
+        <div class="words2">
+            <p>After several attempts by the government and private sectors to rehabilitate 
+                the Pasig River, the vision of its restoration became clear when a citizen 
+                caught a freshwater tilapia in Sta. Ana, Manila. This served as proof of 
+                the river’s improvement.</p><br><br>
+            <p>A study from the Department of Environment and Natural Resources, alongside 
+                the Ecosystems Research and Development Bureau, highlighted the presence 
+                of tilapia and seven other fish species—such as Manila sea catfish, bighead 
+                carp, and Indo-Pacific tarpon—living in the Pasig River since 2009. In addition 
+                to these fish, various species of aquatic plants, birds, trees, and other 
+                vegetation were also found thriving in this once-polluted river.</p>
+        </div>
+    </div>
+
+    <div class="divider" id="parex"></div>
+    
+    <div class="parex">
+        <h1>PAREX as the “Pasig River’s death sentence”</h1>
+    </div>
+
+    <div class="parex_info">
+        The Pasig Expressway (PAREX), proposed by San Miguel Corporation Infrastructure, 
+        is designed to be a 19.37-kilometer, six-lane elevated expressway running the 
+        entire stretch of the Pasig River. It aims to provide a faster route connecting 
+        Metro Manila’s major business districts, such as Makati, Ortigas, and Bonifacio Global City.<br><br>
+        Reducing traffic congestion and drastically reducing travel times throughout 
+        Metro Manila is the project's primary objective. Its secondary goal is to 
+        assist with the Pasig River's cleanup and rehabilitation.  Lastly, it could 
+        work alongside the ferry boats operating on the Pasig River.
+    </div>
+
+    <div class="parex_image">
+        <img src="assets/parex.png" class="after" alt="After image of Pasig River">
+        <figcaption><a href="https://www.dpwh.gov.ph/dpwh/sites/default/files/PPP_images/parex.png">Source</a></figcaption>
+    </div>
+
+    <div class="controversy">
+        <h1>The Controversy Surrounding PAREX</h1>
+    </div>
+
+    <div class="controversy_info">
+        It may showcase itself to help alleviate the Manila traffic, but 
+        some who oppose call the PAREX as the “Pasig River’s death sentence,” 
+        as it will worsen and not solve traffic congestion. Aside from it being 
+        car centric, it will cause environmental issues such as killing of the 
+        Pasig River and heritage erasure.<br><br>
+        According to one of the petitions, the efforts made to restore the Pasig River 
+        will be in vain and will not take into account the demands of the next generation 
+        of the residents. Additionally, causing transport above the Pasig River will 
+        increase non-exhaust emissions like road dust, particulate matter, and microplastics 
+        from car tires, which will contaminate our rivers, streams, and oceans. 
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="references" id="references">
+        <h1 id="referencesTitle">References</h1>
+        <div id="referencesContent" style="display: none;">
+        <ol>
+            <li><a href="https://interaksyon.philstar.com/trends-spotlights/2019/01/29/143140/freshwater-fish-tilapia-caught-in-pasig-river-after-years-of-rehabilitation/#:~:text=It%20cited%20a%20study%20from,fish%E2%80%94had%20been%20living%20in">Madarang, C. R. S. (2019, January 29). Freshwater fish tilapia caught in Pasig River after years of rehabilitation. Interaksyon.</a></li>
+            <li><a href="https://hdl.handle.net/10589/88065">Pacchi, C. (2014, March 24). Civic engagement in urban water governance: the case of Pasig river rehabilitation in metropolitan Manila, The Philippines.</a></li>
+            <li>La Vina, Antonio G. M., & Reyes, J. M. (2022). Maladaptation, loss and damage, and the built environment: limits and possibilities. Ateneo Law Journal, 67(2), 377-410.</li>
+            <li><a href="https://www.flipscience.ph/features/whats-in-the-pasig-river/">https://www.flipscience.ph/features/whats-in-the-pasig-river/</a></li>
+            <li><a href="https://storymaps.arcgis.com/stories/f0119df351f448a18922b4a51fdde539">https://storymaps.arcgis.com/stories/f0119df351f448a18922b4a51fdde539</a></li>
+            <li><a href="https://animalia.bio/index.php/arius-manillensis">https://animalia.bio/index.php/arius-manillensis</a></li>
+            <li><a href="https://asbp.org.ph/wp-content/uploads/2020/08/PJSB-IJD2-2020-008.pdf">https://asbp.org.ph/wp-content/uploads/2020/08/PJSB-IJD2-2020-008.pdf</a></li>
+            <li><a href="https://www.researchgate.net/publication/200600415_Composition_Abundance_and_Distribution_of_Rotifers_in_the_Pasig_River_Philippines">https://www.researchgate.net/publication/200600415_Composition_Abundance_and_Distribution_of_Rotifers_in_the_Pasig_River_Philippines</a></li>
+            <li><a href="https://esmart.nhrc.upd.edu.ph/?p=786#:~:text=The%20word%20“Manila”%20originated%20from,for%20some%20fish%20and%20crustaceans.">https://esmart.nhrc.upd.edu.ph/?p=786#:~:text=The%20word%20“Manila”%20originated%20from,for%20some%20fish%20and%20crustaceans.</a></li>
+            <li><a href="https://mirror.pia.gov.ph/features/2023/07/31/pasig-river-a-historical-waterway-of-cultural-significance">https://mirror.pia.gov.ph/features/2023/07/31/pasig-river-a-historical-waterway-of-cultural-significance</a></li>
+        </ol>
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.getElementById("referencesTitle").addEventListener("click", function() {
+            let content = document.getElementById("referencesContent");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        });
+    </script>
+
+
+</html>
